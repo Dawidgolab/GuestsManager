@@ -3,11 +3,13 @@ from enum import IntEnum
 
 print("Welcome in the Guest Manager!!!")
 
+#Using the IntEnum library
 Menu = IntEnum('Menu',"Add, Delete, Search, All, Save, Exit")
 guest_list = []
 
 guest_list = Manager.load_guest_list()
 
+#Menu
 while True:
 
     choice = int(input('''
@@ -44,6 +46,7 @@ Select option: \n'''))
         else:
             print("The list is empty!!")
 
+# saving in the guests.txt file
     elif choice == Menu.Save:
         Manager.save_guest_list(guest_list)
 
